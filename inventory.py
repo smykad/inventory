@@ -39,7 +39,7 @@ def itemSearch():
     print('Please enter the item you are searching for: ', end='')
     userResponse = input().lower()
     if userResponse in inventory:
-        print(inventory[userResponse])
+        print('Quantity: %(Quantity)s Price: %(Price)s Description: %(Description)s' % (inventory[userResponse]))
     else:
         print('Item not in inventory')
 
