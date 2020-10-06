@@ -77,5 +77,4 @@ askUser()
 askSearch()
 printTable()
 
-# print('%()s: %(Quantity)s %(Price)s %(Description)s' % i)
 #EOF
