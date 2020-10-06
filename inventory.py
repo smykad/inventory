@@ -12,8 +12,10 @@ def addNewItem(info):
 
 # Function for getting information from user
 def newItem():
+    global itemList
     print('item: ', end='')
     v1 = input().lower()
+    itemList.append(v1)
     print('Quantity: ', end='')
     v2 = input().lower()
     print('Price: ', end='')
@@ -54,10 +56,23 @@ def askSearch():
         else:
             search = False
 
-# Initialize dictionary
-inventory = {}
 
+# Function for printing table
+def printTable():
+    global itemList
+    global inventory
+    for i in inventory:
+        print('%(item)s Quantity: %(Quantity)s Price: %(Price)s Description: %(Description)s' % (
+                    itemList[i] + inventory[i]))
+
+
+# Initialization
+inventory = {}
+itemList = []
+
+# Main
 askUser()
 askSearch()
+printTable()
 
-print(inventory)
+#EOF
