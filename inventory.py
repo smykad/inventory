@@ -59,12 +59,14 @@ def askSearch():
 
 # Function for printing table
 def printTable():
-    global itemList
     global inventory
+    global itemList
+    j = 0
     for i in inventory:
-        print('%(item)s Quantity: %(Quantity)s Price: %(Price)s Description: %(Description)s' % (
-                    itemList[i] + inventory[i]))
-
+        item = itemList[j]
+        j += 1
+        print('%s: ' % item)
+        print('Quantity: %(Quantity)s Price: %(Price)s Description: %(Description)s' % (inventory[i]))
 
 # Initialization
 inventory = {}
@@ -75,4 +77,5 @@ askUser()
 askSearch()
 printTable()
 
+# print('%()s: %(Quantity)s %(Price)s %(Description)s' % i)
 #EOF
