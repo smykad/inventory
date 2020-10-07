@@ -71,11 +71,11 @@ def print_table():
         j += 1
         print('[%s] ' % item, end='')
         print('Quantity: %(Quantity)s Price: %(Price)s Description: %(Description)s' % (inventory[i]))
-
     print('\n********************************************************\n')
 
 
-def main_function():
+# Function for main
+def main():
     ask_user()
     ask_search()
     print_table()
@@ -86,6 +86,6 @@ inventory = {}
 itemList = []
 
 # Main
-main_function()
+main()
 
 # EOF
